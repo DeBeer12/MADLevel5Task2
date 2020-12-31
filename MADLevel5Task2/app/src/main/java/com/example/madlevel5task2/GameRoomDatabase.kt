@@ -7,14 +7,12 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 
-//todo lees abstract class door
 @Database(entities = [Game::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class GameRoomDatabase: RoomDatabase() {
 
     abstract fun gameDao(): GameDao
 
-    //static
     companion object{
         private const val DATABASE_NAME = "GAME_DATABASE"
 

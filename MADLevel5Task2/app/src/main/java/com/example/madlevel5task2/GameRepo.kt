@@ -8,7 +8,7 @@ class GameRepository(context: Context) {
     private val gameDao: GameDao
 
     init {
-        val database = GameReleaseRoomDatabase.getDatabase(context)
+        val database = GameRoomDatabase.getDatabase(context)
         gameDao = database!!.gameDao()
     }
 
